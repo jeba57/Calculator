@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculator (C, ⌫, (), %, ÷ • ops on right)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="calc">
+    <div id="exp" class="exp"></div>
+    <input id="display" class="display" placeholder="0" readonly />
+    <div class="grid">
+      <!-- Row 1: C, ⌫, (), ÷ (÷ must be last col for the operator column layout) -->
+      <button data-key="C" class="secondary">C</button>
+      <button data-key="cut" class="secondary">⌫</button>
+      <button data-key="paren" class="secondary">()</button>
+      <button data-key="/" class="op">÷</button>
+
+      <!-- Row 2: last col is × -->
+      <button data-key="7">7</button>
+      <button data-key="8">8</button>
+      <button data-key="9">9</button>
+      <button data-key="*" class="op">×</button>
+
+      <!-- Row 3: last col is − -->
+      <button data-key="4">4</button>
+      <button data-key="5">5</button>
+      <button data-key="6">6</button>
+      <button data-key="-" class="op">−</button>
+
+      <!-- Row 4: last col is + -->
+      <button data-key="1">1</button>
+      <button data-key="2">2</button>
+      <button data-key="3">3</button>
+      <button data-key="+" class="op">+</button>
+
+      <!-- Row 5: 0 normal size, ., %, = -->
+      <button data-key="0">0</button>
+      <button data-key=".">.</button>
+      <button data-key="percent" class="secondary">%</button>
+      <button data-key="equal" class="accent">=</button>
+    </div>
+    <div id="status" class="status"></div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
